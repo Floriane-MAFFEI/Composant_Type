@@ -8,7 +8,7 @@ body {
 
   .wrapper {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -22,7 +22,7 @@ body {
       flex: 1;
       flex-basis: 300px;
       flex-grow: 0;
-      height: 200px;
+      height: 250px;
       box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
       cursor: pointer;
       transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -54,12 +54,13 @@ body {
         left: 0px;
         transition: all 0.5s ease-in-out;
         clip-path: circle(75%);
+        margin-top: 1rem;
       }
 
       &:hover {
         transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-        transform: scale(0.97);
+        transform: scale(1.03);
 
         img {
           transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -88,6 +89,7 @@ body {
         background-color: #110b7f;
         font-size: 15px;
         outline: none;
+        border-radius: 5px;
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
         transition: all 0.5s ease-in-out;
 
@@ -114,7 +116,7 @@ body {
     padding: 0;
 
     li {
-      margin: 5px 0;
+      margin: 10px;
     }
   }
 }
@@ -137,5 +139,54 @@ body {
     font-size: 1em;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
     margin: 2px;
+    &.html {
+      color: black;
+      background-color: #e96228;
+    }
+    &.css {
+      color: white;
+      background-color: #2862e9;
+    }
+    &.js {
+      color: black;
+      background-color: #efd81d;
+    }
+    &.sass {
+      color: black;
+      background-color: #c76494;
+    }
+    &.symfony {
+      color: white;
+      background-color: black;
+    }
+    &.react {
+      color: white;
+      background-color: #5ed3f3;
+    }
+    &.wordpress {
+      color: black;
+      background-color: #28799e;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.header {
+  background: linear-gradient(#767373, #d6d6d6);
+  i {
+    display: flex;
+    justify-content: flex-end;
+  }
+  span {
+    margin: auto;
+    padding: 0 0.2rem;
+    &.symbol {
+      margin: 0.2rem 1rem;
+    }
   }
 }
