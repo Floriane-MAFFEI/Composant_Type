@@ -1,0 +1,8 @@
+.scroll-line {
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 0, 0)), linear-gradient(rgba(0, 195, 255, 0.5), rgba(0, 0, 0, 0)), linear-gradient(rgba(9, 3, 136, 0.5), rgba(0, 0, 0, 0));
+  top: 0;
+  left: 0;
+  height: 1rem;
+  position: fixed;
+  transition: 0.5s ease-out;
+}/*# sourceMappingURL=main.css.map */
