@@ -17,7 +17,7 @@ body {
   border-radius: 15px;
   color: #ffffff;
   margin: 20px auto;
-  max-width: 768px;
+  width: 55%;
   padding: 50px 80px;
   position: relative;
 
@@ -77,6 +77,12 @@ body {
     margin: 0.8rem 0;
   }
 
+  .arrow.arrow-right {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
   @keyframes grow {
     0% {
       transform: scaleX(0);
@@ -87,7 +93,7 @@ body {
     padding: 20px 30px;
 
     .quote-right {
-      left: 80%;
+      left: 70%;
       top: 0;
     }
 

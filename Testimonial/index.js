@@ -1,3 +1,6 @@
+// Ajoutez ces lignes au début de votre fichier JS pour stocker l'ID de l'intervalle
+let intervalId;
+
 // Sélection des différents éléments
 const testimonialsContainer = document.querySelector(".testimonials-container");
 const testimonial = testimonialsContainer.querySelector(".testimonial");
@@ -5,7 +8,7 @@ const logo = testimonialsContainer.querySelector(".logo");
 const username = testimonialsContainer.querySelector(".username");
 const role = testimonialsContainer.querySelector(".role");
 
-// Contient les témoiignages
+// Contient les témoignages
 const testimonials = [
   {
     name: "John Doe",
@@ -52,5 +55,45 @@ function updateTestimonial() {
   }
 }
 
-// Appelle de la fonction toute les 10 secondes
-setInterval(updateTestimonial, 10000);
+// Appelle de la fonction toutes les 10 secondes
+intervalId = setInterval(updateTestimonial, 10000);
+
+// Ajoutez ces fonctions pour changer de témoignage en utilisant les flèches
+function changeTestimonial(direction) {
+  // Arrêtez l'intervalle avant de changer de témoignage
+  clearInterval(intervalId);
+
+  // Mettez à jour l'indice en fonction de la direction (1 pour suivant, -1 pour précédent)
+  index += direction;
+
+  // Si l'indice dépasse la longueur du tableau, remise à zéro pour créer une boucle
+  // et redémarrer au premier témoignage
+  if (index >= testimonials.length) {
+    index = 0;
+  } else if (index < 0) {
+    index = testimonials.length - 1;
+  }
+
+  // Mise à jour du témoignage dans le DOM
+  updateTestimonial();
+
+  // Réinitialisez la barre de progression
+  resetProgressBar();
+
+  // Redémarrez l'intervalle après le changement de témoignage
+  intervalId = setInterval(updateTestimonial, 10000);
+}
+
+// Fonction pour réinitialiser la barre de progression
+function resetProgressBar() {
+  const progressBar = testimonialsContainer.querySelector(".progress-bar");
+  progressBar.style.animation = "none"; // Supprime l'animation actuelle
+  void progressBar.offsetWidth; // Forcez une réinitialisation du style (retrigger reflow)
+  progressBar.style.animation = "grow 10s linear infinite"; // Réapplique l'animation
+}
+
+// Ajoutez un gestionnaire d'événements pour arrêter l'intervalle lorsqu'on clique sur les flèches
+document.querySelector(".arrow-right").addEventListener("click", function () {
+  stopInterval();
+  changeTestimonial(1);
+});
