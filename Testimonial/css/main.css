@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(251, 250, 252);
+  display: flex;
+  font-family: "Montserrat";
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.testimonials-container {
+  background-color: #0b2887;
+  border-radius: 15px;
+  color: #ffffff;
+  margin: 20px auto;
+  max-width: 768px;
+  padding: 50px 80px;
+  position: relative;
+}
+.testimonials-container .quote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
+.testimonials-container .quote-right {
+  left: 40px;
+}
+.testimonials-container .quote-left {
+  right: 40px;
+  rotate: 180deg;
+}
+.testimonials-container .testimonial {
+  line-height: 28px;
+  text-align: justify;
+}
+.testimonials-container .centered-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials-container .centered-items .logo {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials-container .centered-items .user-details {
+  margin-left: 10px;
+}
+.testimonials-container .centered-items .user-details .username {
+  margin: 0;
+}
+.testimonials-container .centered-items .user-details .role {
+  font-weight: normal;
+  margin: 2px 0;
+}
+.testimonials-container .progress-bar {
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+  margin: 0.8rem 0;
+}
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 20px 30px;
+  }
+  .testimonials-container .quote-right {
+    left: 80%;
+    top: 0;
+  }
+  .testimonials-container .quote-left {
+    top: 0;
+    left: 97%;
+  }
+}/*# sourceMappingURL=main.css.map */
