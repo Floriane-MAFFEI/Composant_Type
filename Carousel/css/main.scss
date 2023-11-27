@@ -1,4 +1,5 @@
-#carousel-wrapper {
+#carousel-wrapper,
+#carousel-wrapper2 {
   width: auto;
   height: auto;
   display: flex;
@@ -7,7 +8,8 @@
   justify-content: center;
   overflow: hidden;
 
-  #menu {
+  #menu,
+  #menu-2 {
     height: 380px;
     width: 720px;
     overflow: hidden;
@@ -31,7 +33,8 @@
       justify-content: center;
       overflow: hidden;
 
-      #current-option-text1 {
+      #current-option-text1,
+      #current-option-text1-2 {
         font-size: 1.6rem;
         line-height: 3rem;
         width: 220px;
@@ -66,7 +69,8 @@
         }
       }
 
-      #current-option-text2 {
+      #current-option-text2,
+      #current-option-text2-2 {
         font-size: 0.8rem;
         width: 220px;
         height: 40px;
@@ -101,7 +105,8 @@
       }
     }
 
-    #previous-option {
+    #previous-option,
+    #previous-option-2 {
       width: 1.5rem;
       height: 1.5rem;
       border: none;
@@ -113,7 +118,8 @@
       transform: translate(310px, 50px);
     }
 
-    #next-option {
+    #next-option,
+    #next-option-2 {
       width: 1.5rem;
       height: 1.5rem;
       border: none;
@@ -126,7 +132,8 @@
     }
   }
 
-  #image {
+  #image,
+  #image-2 {
     height: 240px;
     width: 300px;
     background-position: center;
@@ -140,23 +147,28 @@
   &.anim-next {
     pointer-events: none;
 
-    #current-option-text1 {
+    #current-option-text1,
+    #current-option-text1-2 {
       animation: next-text 0.65s 0.085s;
     }
 
-    #current-option-text2 {
+    #current-option-text2,
+    #current-option-text2-2 {
       animation: next-text 0.65s 0.085s;
     }
 
-    #previous-option {
+    #previous-option,
+    #previous-option-2 {
       animation: next-top-arrow 0.65s 0.085s;
     }
 
-    #next-option {
+    #next-option,
+    #next-option-2 {
       animation: next-bottom-arrow 0.65s 0.085s;
     }
 
-    #image {
+    #image,
+    #image-2 {
       animation: next-image 0.65s 0.085s;
     }
   }
@@ -164,23 +176,28 @@
   &.anim-previous {
     pointer-events: none;
 
-    #current-option-text1 {
+    #current-option-text1,
+    #current-option-text1-2 {
       animation: previous-text 0.65s 0.085s;
     }
 
-    #current-option-text2 {
+    #current-option-text2,
+    #current-option-text2-2 {
       animation: previous-text 0.65s 0.085s;
     }
 
-    #previous-option {
+    #previous-option,
+    #previous-option-2 {
       animation: previous-top-arrow 0.65s 0.085s;
     }
 
-    #next-option {
+    #next-option,
+    #next-option-2 {
       animation: previous-bottom-arrow 0.65s 0.085s;
     }
 
-    #image {
+    #image,
+    #image-2 {
       animation: previous-image 0.65s 0.085s;
     }
   }
