@@ -1,8 +1,56 @@
 .scroll-line {
-  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 0, 0)), linear-gradient(rgba(0, 195, 255, 0.5), rgba(0, 0, 0, 0)), linear-gradient(rgba(9, 3, 136, 0.5), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 0, 0)), linear-gradient(rgba(0, 195, 255, 0.563), rgba(0, 0, 0, 0)), linear-gradient(rgba(13, 6, 160, 0.5), rgba(0, 0, 0, 0));
   top: 0;
   left: 0;
   height: 1rem;
   position: fixed;
   transition: 0.5s ease-out;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba(18, 18, 254, 0.811);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  transition: border-radius 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 3%;
+  cursor: pointer;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 31% 0%;
+  }
+  50% {
+    background-position: 70% 100%;
+  }
+  100% {
+    background-position: 31% 0%;
+  }
+}
+.btn:hover {
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.763), rgba(0, 38, 255, 0.495), rgb(72, 72, 250), white);
+  background-size: 200% 200%;
+  animation: gradientMove 1s linear infinite;
+  border-radius: 20px;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1%;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
