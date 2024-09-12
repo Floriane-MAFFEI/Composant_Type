@@ -2,7 +2,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a {
+a#modal {
   text-decoration: none;
   padding: 15px;
   background-color: rgb(29, 16, 150);
@@ -56,4 +56,52 @@ a.modal_close {
   padding: 0rem;
   text-decoration: none;
   background-color: transparent;
+}
+
+.accueil .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba(18, 18, 254, 0.811);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  transition: border-radius 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 3%;
+  cursor: pointer;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 31% 0%;
+  }
+  50% {
+    background-position: 70% 100%;
+  }
+  100% {
+    background-position: 31% 0%;
+  }
+}
+.accueil .btn:hover {
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.763), rgba(0, 38, 255, 0.495), rgb(72, 72, 250), white);
+  background-size: 200% 200%;
+  animation: gradientMove 1s linear infinite;
+  border-radius: 20px;
+}
+
+.accueil .btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.accueil a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1%;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
